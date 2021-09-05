@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { sidebar, space } from '../../style/stylesheet';
+import { SongData } from '../../App';
 
 const SideBarContainer = styled.div`
   z-index: ${sidebar.zindex};
@@ -11,9 +12,14 @@ const SideBarContainer = styled.div`
   padding: ${space.small};
 `;
 
-const SideBar = () => {
+interface SideBarProps {
+  setCurrentSong: React.Dispatch<React.SetStateAction<SongData | undefined>>;
+}
+
+const SideBar = ({setCurrentSong}: SideBarProps) => {
+
   return (
-    <SideBarContainer >
+    <SideBarContainer>
       SIDEBAR PLACEHOLDER
     </SideBarContainer>
   )

@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { header, space } from '../../style/stylesheet';
+import NowPlaying from '../NowPlaying/NowPlaying';
+import { SongData } from '../../App';
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -12,10 +14,15 @@ const HeaderContainer = styled.div`
   flex-flow: row wrap;
 `;
 
-const Header = () => {
+interface HeaderProps {
+  currentSong: SongData | undefined;
+}
+
+const Header = ({currentSong}: HeaderProps) => {
+  
   return (
     <HeaderContainer>
-      HEADER PLACEHOLDER
+      <NowPlaying currentSong={currentSong} />
     </HeaderContainer>
   )
 }

@@ -15,7 +15,7 @@ describe('layout setup', () => {
   describe('Header', () => {
     it('renders PLACEHOLDER text', () => {
       render(<App/>);
-      const placeholderText = screen.getByText(/.*HEADER.*/);
+      const placeholderText = screen.getByText(/.*No Song Playing.*/);
     expect(placeholderText).toBeInTheDocument();
     });
   });

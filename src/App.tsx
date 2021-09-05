@@ -18,15 +18,26 @@ const BodyContainer = styled.div`
   height: 100%;
 `;
 
-const App = () => (
-  <AppContainer>
-    <SideBar />
-    <BodyContainer>
-      <Header />
-      <ButtonPanel />
-    </BodyContainer>
+export interface SongData{
+  title: string;
+  artist: string;
+  duration: string;
+  thumbnail?: string;
+}
 
-  </AppContainer>
-)
+const App = () => {
+  const [currentSong, setCurrentSong] = React.useState<SongData | undefined>(undefined);
+
+  return (
+    <AppContainer>
+      <SideBar setCurrentSong={setCurrentSong}/>
+      <BodyContainer>
+        <Header currentSong={currentSong}/>
+        <ButtonPanel />
+      </BodyContainer>
+
+    </AppContainer>
+  );
+}
 
 export default App;

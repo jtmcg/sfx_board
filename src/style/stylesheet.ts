@@ -19,7 +19,7 @@ export const space = {
 export const header = {
   backgroundcolor: '#858585',
   color: 'white',
-  minheight: '300px',
+  minheight: '250px',
 }
 
 /** Sidebar */
@@ -41,4 +41,23 @@ export const buttonpanel = {
 export const soundfx = {
   width: '150px',
   height: '150px',
+}
+
+export const roundbutton = {
+  width: '120px',
+  height: '120px',
+  color: '#0000ff',
+}
+
+/** Fonts */
+export const font = {
+  fontfamily: 'Roboto',
+  h1: {
+    size: '32px',
+    weight: 'bold',
+  },
+  subtext: {
+    size: '12px',
+    weight: 'lighter'
+  },
 }
